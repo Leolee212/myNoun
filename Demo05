@@ -1,0 +1,35 @@
+public class Demo05 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please input year!");
+        int year = scanner.nextInt();
+        System.out.println("Please input month");
+        String month = scanner.next();
+        switch (month) {
+            case "Jan":
+            case "Mar":
+            case "Ay":
+            case "Jul":
+            case "Aug":
+            case "Oct":
+            case "Dec":
+                System.out.println(month +"\t"+ year + "\thave 31 days!");
+                break;
+            case "Apr":
+            case "Jun":
+            case "Sep":
+            case "Nov":
+                System.out.println(month + "\t"+year + "\thave 30 days!");
+                break;
+            case "Feb":
+                if (0 == year % 4 && 0 != year / 100 || 0 == year % 400) {
+                    System.out.println(month +"\t" +year + "\thave 29 days!");
+                } else {
+                    System.out.println(month + "\t"+year + "\thave 28 days!");
+                }
+                break;
+            default:
+                System.out.println("ERROR!");
+        }
+    }
+}
