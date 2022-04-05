@@ -1,0 +1,10 @@
+public class Demo01 {
+    public static void main(String[] args) {
+        String year;
+        Calendar now = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+        now.add(Calendar.YEAR ,0 );
+        year = sdf.format(now.getTime());
+        System.out.println(year);
+    }
+}
