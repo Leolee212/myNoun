@@ -87,7 +87,7 @@ public class Demo02 {
             Integer.parseInt(str);
             return true;
         } catch (NumberFormatException e) {
-            System.out.println("您输入有误,请输入数字");
+            System.out.println("ERROR!Please input number");
             return false;
         }
     }
